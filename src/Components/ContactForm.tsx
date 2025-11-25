@@ -23,7 +23,7 @@ const ContactForm = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-7 items-start">
       <div className="bg-[#171718] text-white shadow-[0_0_20px_rgba(59,130,246,0.7)] rounded-xl w-full max-w-3xl flex flex-col items-center justify-center px-6 py-5">
-        <div className="max-w-3xl w-full grid md:grid-cols-2 gap-10">
+        <div className="w-full max-w-3xl grid gap-10">
           <div>
             <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
             <form>
@@ -33,7 +33,7 @@ const ContactForm = () => {
                   <input
                     type="text"
                     placeholder="Your full name"
-                    className="border border-gray-500/40 w-full mt-2 text-gray-400 bg-black py-2 px-4 rounded-xl"
+                    className="border border-gray-500/40 w-full! mt-2 text-gray-400 bg-black py-2 px-4 rounded-xl"
                   />
                 </div>
 

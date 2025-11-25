@@ -2,16 +2,16 @@ const skillsData = [
   {
     title: "Frontend",
     skills: [
-      { name: "React/Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "JavaScript (ES6+)", level: 85 },
+      { name: "React/Next.js", level: 90 },
+      { name: "TypeScript", level: 85 },
+      { name: "JavaScript (ES6+)", level: 80 },
       { name: "CSS/Tailwind", level: 90 },
     ],
   },
   {
     title: "Tools & Practices",
     skills: [
-      { name: "Git & GitHub", level: 95 },
+      { name: "Git & GitHub", level: 90 },
       { name: "REST APIs", level: 85 },
       { name: "Figma", level: 90 },
       { name: "GraphQL", level: 85 },
@@ -29,10 +29,10 @@ const skillsData = [
 ];
 
 const Accs = [
-  "AWS Certified Solutions Architect",
-  "Certified Kubernetes Administrator",
-  "Scrum Master Certified",
-  "Google Cloud Professional",
+  "React & Typescript Developer",
+  "Responsive Web Design",
+  "API Integration & Interactive UI",
+  "Live Deployed Project",
 ];
 
 const Skills = () => {

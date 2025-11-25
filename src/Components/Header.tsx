@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { MenuOutlined } from "@ant-design/icons";
-import { Drawer, Menu } from "antd";
+import { Drawer } from "antd";
 
 import AboutPage from "../Pages/AboutPage";
 import LeadershipPage from "../Pages/LeadershipPage";
@@ -10,6 +10,7 @@ import SkillsPage from "../Pages/SkillsPage";
 import CustomButton from "./CustomButton";
 import Hero from "./Hero";
 import Nav from "./Nav";
+import { X } from "lucide-react";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -17,14 +18,14 @@ const Header = () => {
   const showDrawer = () => setOpen(true);
   const onClose = () => setOpen(false);
 
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      onClose(); // Close drawer after click
-    }
-  };
-
+  const links = [
+    { name: "About", id: "about" },
+    { name: "Skills", id: "skills" },
+    { name: "Projects", id: "projects" },
+    { name: "Leadership", id: "leadership" },
+    { name: "Contact", id: "contact" },
+    { name: "Get In Touch", id: "contact" },
+  ];
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -66,44 +67,57 @@ const Header = () => {
           </div>
 
           <Drawer
-            title="Oluwatosin T"
             placement="right"
             onClose={onClose}
             open={open}
-            width="50%"
-            style={{ maxWidth: 300 }}
+            width="100%"
+            className="bg-transparent! backdrop-blur-md"
             bodyStyle={{ padding: 0 }}
+            headerStyle={{ display: "none" }}
+            styles={{
+              wrapper: { height: "80vh" }, // custom height for right drawer
+            }}
           >
-            <Menu mode="vertical" selectable={false}>
-              <Menu.Item key="about" onClick={() => scrollToSection("about")}>
-                About
-              </Menu.Item>
+            {/* HEADER */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-800">
+              <div className="flex items-center gap-2">
+                <p className="font-bold text-lg bg-linear-to-r from-blue-500 via-purple-500 to-green-400! text-transparent bg-clip-text!">
+                  💼 OT
+                </p>
+              </div>
 
-              <Menu.Item key="skills" onClick={() => scrollToSection("skills")}>
-                Skills
-              </Menu.Item>
-
-              <Menu.Item
-                key="projects"
-                onClick={() => scrollToSection("projects")}
+              <button
+                onClick={onClose}
+                className="text-gray-400 hover:text-white"
               >
-                Projects
-              </Menu.Item>
+                <X size={24} />
+              </button>
+            </div>
 
-              <Menu.Item
-                key="leadership"
-                onClick={() => scrollToSection("leadership")}
-              >
-                Leadership
-              </Menu.Item>
+            <div className="flex flex-col py-6 px-5 gap-6">
+              {links.map((link, index) => {
+                const isGetInTouch = link.name === "Get In Touch";
 
-              <Menu.Item
-                key="contact"
-                onClick={() => scrollToSection("contact")}
-              >
-                Contact
-              </Menu.Item>
-            </Menu>
+                return (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      onClose();
+                      document.getElementById(link.id)?.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
+                    className={
+                      isGetInTouch
+                        ? "hover-gradient-glow bg-linear-to-r from-blue-500 via-purple-500 to-teal-400 text-black text-[15px] font-semibold px-6 py-3 rounded-lg shadow-md transition-all duration-500 hover:-translate-y-2"
+                        : "text-gray-400 text-[16px] font-medium hover:text-white transition-all text-left"
+                    }
+                  >
+                    {link.name}
+                  </button>
+                );
+              })}
+            </div>
           </Drawer>
 
           <div className="pt-13"></div>

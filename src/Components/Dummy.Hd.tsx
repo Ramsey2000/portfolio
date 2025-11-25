@@ -62,3 +62,50 @@ const Header = () => {
 };
 
 export default Header;
+
+{
+  /* <Drawer
+            title={
+              <div className="text-xl bg-linear-to-r from-blue-500 via-purple-500 to-green-400 bg-clip-text text-transparent font-semibold">
+                💼 OT
+              </div>
+            }
+            placement="right"
+            onClose={onClose}
+            open={open}
+            width="100%"
+            style={{ maxWidth: "100%" }}
+            bodyStyle={{ padding: 0 }}
+          >
+            <Menu mode="vertical" selectable={false}>
+              <Menu.Item key="about" onClick={() => scrollToSection("about")}>
+                About
+              </Menu.Item>
+
+              <Menu.Item key="skills" onClick={() => scrollToSection("skills")}>
+                Skills
+              </Menu.Item>
+
+              <Menu.Item
+                key="projects"
+                onClick={() => scrollToSection("projects")}
+              >
+                Projects
+              </Menu.Item>
+
+              <Menu.Item
+                key="leadership"
+                onClick={() => scrollToSection("leadership")}
+              >
+                Leadership
+              </Menu.Item>
+
+              <Menu.Item
+                key="contact"
+                onClick={() => scrollToSection("contact")}
+              >
+                Contact
+              </Menu.Item>
+            </Menu>
+          </Drawer> */
+}

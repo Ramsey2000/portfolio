@@ -19,41 +19,49 @@ const Hero = () => {
 
       <div
         className="text-center text-gray-400 font-medium 
-             text-base sm:text-lg md:text-xl max-w-2xl mx-auto mt-4 leading-relaxed px-2"
+             text-base sm:text-lg md:text-xl max-w-3xl mx-auto mt-4 leading-relaxed px-2"
       >
         <p>
-          A frontend developer with 2+ years of experience building scalable
-          <br />
-          and responsive web applications. From startups to establish
-          <br />
-          teams, I help turn product ideas into fast, accessible, and
-          <br />
-          maintainable web experiences.
+          A frontend developer with 1+ year of experience building responsive
+          User Interfaces and developing dynamic, user-focused web application.
+          Skilled in creating reuseable components.
         </p>
       </div>
 
       <div className="flex flex-wrap cursor-pointer mt-6 justify-center gap-2 sm:gap-3 mb-10">
-        {["React", "TypeScript", "Node.js", "AWS", "Docker", "JavaScript"].map(
-          (skill, i) => (
-            <span
-              key={i}
-              className="px-3 py-1 font-semibold text-xs sm:text-sm bg-transparent rounded-full 
+        {[
+          "HTML",
+          "React",
+          "JavaScript",
+          "Typescript",
+          "CSS",
+          "Tailwind CSS",
+        ].map((skill, i) => (
+          <span
+            key={i}
+            className="px-3 font-semibold text-xs sm:text-sm bg-transparent rounded-full 
                          border border-gray-800 hover:bg-green-700 hover:-translate-y-1 
                          transition-transform duration-300"
-            >
-              {skill}
-            </span>
-          )
-        )}
+          >
+            {skill}
+          </span>
+        ))}
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center gap-4 justify-center py-3">
+      <div
+        id="#projectpage"
+        className="flex flex-col sm:flex-row items-center gap-4 justify-center py-3"
+      >
         <CustomButton
           title="View My Work"
           icon="✨"
           className="hover-gradient-glow cursor-pointer rounded-lg px-7 py-3 text-base sm:text-lg
-                     bg-linear-to-r from-blue-500 via-purple-500 to-teal-400 text-black 
-                     transition-all duration-500 ease-in-out hover:-translate-y-2"
+             bg-linear-to-r from-blue-500 via-purple-500 to-teal-400 text-black 
+             transition-all duration-500 ease-in-out hover:-translate-y-2"
+          onClick={() => {
+            const section = document.getElementById("projects");
+            section?.scrollIntoView({ behavior: "smooth" });
+          }}
         />
 
         <CustomButton
@@ -61,6 +69,10 @@ const Hero = () => {
           icon="🚀"
           className="border border-gray-600 text-base sm:text-lg bg-black rounded-lg px-7 py-3 
                      hover:bg-purple-700 hover:-translate-y-2"
+          onClick={() => {
+            const section = document.getElementById("Contact");
+            section?.scrollIntoView({ behavior: "smooth" });
+          }}
         />
       </div>
 
@@ -76,9 +88,9 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-4 animate-bounce">
+      <div className="flex justify-center pt-9 animate-bounce">
         <ArrowDown
-          size={24}
+          size={22}
           className="text-blue-500 sm:size-[26px] md:size-[30px]"
         />
       </div>

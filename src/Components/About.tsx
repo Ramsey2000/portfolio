@@ -28,7 +28,7 @@ const About = () => {
     <div className="bg-[#080808] min-h-screen w-full overflow-hidden">
       {/* Top Button */}
       <div className="flex justify-center pt-10">
-        <button className="border border-blue-400 rounded-full px-3 py-1 text-sm text-white">
+        <button className="border border-blue-400 rounded-full px-3 text-sm text-white">
           ✨ About Me
         </button>
       </div>
@@ -44,16 +44,12 @@ const About = () => {
       {/* Description */}
       <div className="text-gray-400 font-semibold text-center text-lg px-6 max-w-3xl mx-auto space-y-2">
         <p>
-          I'm a software developer with a passion for building scalable,
-          user-centric applications.
-        </p>
-        <p>
-          My experience spans from startup environments to enterprise systems,
-          always focusing on clean code and collaboration.
-        </p>
-        <p>
-          I believe in continuous learning and crafting accessible, intuitive
-          user experiences.
+          I'm a frontend developer with hands-on experience building responsive
+          web applications and reuseable UI components. i focus on clean code,
+          accessibility and delivering seamless user experiences. I,m obsessed
+          with growth, constantly exploring new tools improving my skills to
+          stay sharp and effective in the fast-moving world of frontend
+          developer.
         </p>
       </div>
 
@@ -67,22 +63,23 @@ const About = () => {
             </h2>
 
             <p className="mb-4 text-gray-400 font-semibold leading-relaxed">
-              I'm passionate about building intuitive, accessible user
-              interfaces and writing clean, modular code. Over the years, I’ve
-              collaborated with teams to ship modern web applications that are
-              visually polished and technically solid.
+              I'm focused on creating fast, scalable, and user-centered web
+              applications using modern frontend technologies. I work with
+              React, Typescript, Javascript, Tailwind CSS, and clean component
+              architecture to bing structure, clarity and perfomance to every
+              project.
             </p>
 
             <p className="mb-4 text-gray-400 font-semibold leading-relaxed">
-              Whether I'm spinning up projects with Vite, crafting components in
-              React, or refining responsiveness with Tailwind CSS, I always
-              bring a user-first mindset.
+              What drives me is the ability to translate ideas into real
+              products: reuseable system, dynamic interfaces and smooth user
+              interactions.
             </p>
 
             <p className="text-gray-400 font-semibold leading-relaxed">
-              I care deeply about UX consistency, performance, and smooth
-              collaboration — thriving in environments where improvement is
-              valued.
+              My goal is to continue developing high-quality applications, and
+              contribute solutions that make the web faster, smater, and more
+              intuitive for everyone.
             </p>
           </div>
 
